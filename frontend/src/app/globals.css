@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary-blue: #2563eb;
+  --primary-blue-hover: #1d4ed8;
+  --accent-blue: #0284c7;
+  --blueprint-grid: #e2e8f0;
+}
+
+body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Clean Light Grid Background Pattern - Light White/Slate with very subtle soft blue dots */
+.blueprint-grid-bg {
+  background-color: #f8fafc !important;
+  background-image: 
+    linear-gradient(to right, rgba(37, 99, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(37, 99, 235, 0.05) 1px, transparent 1px) !important;
+  background-size: 24px 24px !important;
+}
+
+/* Crisp Clean White Card with soft shadow */
+.blueprint-card {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05) !important;
+}
+
+.blueprint-card:hover {
+  border-color: #93c5fd !important;
+  box-shadow: 0 8px 30px -4px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Glow effects tailored for light white & blue */
+.glow-cyan, .glow-blue {
+  box-shadow: 0 0 25px -5px rgba(37, 99, 235, 0.15) !important;
+}
+
+.glow-amber {
+  box-shadow: 0 0 25px -5px rgba(245, 158, 11, 0.15) !important;
+}
+
+/* Custom Scrollbar - Sleek Slate/Blue */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Animations */
+@keyframes pulse-blue {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.04); }
+}
+
+.animate-pulse-cyan, .animate-pulse-blue {
+  animation: pulse-blue 2s infinite ease-in-out;
+}
